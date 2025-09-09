@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap')
+
+@mixin size($w,$h)
+  height: $h
+  width: $w
+  
+@mixin maxsize($w,$h)
+  max-height: $h
+  max-width: $w
+  
+@mixin phone
+  @media (max-width: 740px)
+    @content
+  
+html, body
+  margin: 0px auto
+  display: flex
+  flex-direction: column
+  +phone
+    width: 100vw
+
+*
+  // outline: 1px black solid
+  position: relative
+  font-family: 'Noto Sans TC', sans-serif
+
+.index
+  +size(768px, 100vh)
+  background-image: url('https://i.imgur.com/XuIllOs.png')  
+  background-size: cover
+  +phone
+    width: 100vw
+
+  .logo
+    width: 400px
+    margin-top: 20px
+    margin-left: 20px
+    +phone
+      width: 50vw
+
+  .ToolbarButton
+    position: absolute
+    padding: 10px
+    // outline: 1px black solid
+    +size(40px, 40px)
+    right: 20px
+    top: 20px
+    cursor: pointer
+    transition: 1s
+    stroke-width: 10
+    stroke: black
+    +phone
+      margin-right: 5%
+
+    &:hover
+      background-color: black
+      stroke: white
+    
+  .ToolbarButtonX
+    position: absolute
+    padding: 10px
+    // outline: 1px black solid
+    +size(40px, 40px)
+    right: 20px
+    top: 20px
+    cursor: pointer
+    transition: 1s
+    stroke-width: 10px
+    background-color: black
+    stroke: white
+    +phone
+      margin-right: 5%
+
+  .Toolbar
+    display: none
+    position: absolute
+    width: 150px
+    right: 20px
+    top: 10vh
+    background-color: rgba(white, 0.5)
+    backdrop-filter: blur(10px)
+    -webkit-backdrop-filter: blur(10px)
+    box-shadow: 0px 0px 5px 5px rgba(black, 0.1)
+    +phone
+      top: 20vh
+
+    @keyframe ToolbarSwitch
+      from
+        display: none
+        top: 20px
+      to
+        display: normal
+        top: 50px
+
+    .button
+      font-weight: 600
+      text-align: right
+      cursor: pointer
+      margin: 40px 0px
+      margin-right: 20px
+      padding-right: 10px
+      &:hover
+        background-color: black
+        color: white
+
+  .hasTage
+    position: absolute
+    text-align: right
+    right: 20px
+    bottom: 20px
+    line-height: 30px
+    font-weight: 600
+    user-select: none
+    +phone
+      margin-right: 5%
+    
+.aboutUs
+  position: fixed
+  left: 50%
+  top: 50%
+  margin-left: -150px
+  padding: 20px
+  width: 300px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  transform: translateY(-50%)
+  background-color: rgba(white, 0.5)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
+  box-shadow: 0px 0px 5px 5px rgba(black, 0.1)
+  h1
+    width: 100%
+    text-align: center
+  p  
+    width: 280px
+  .aboutUsX
+    +size(20px, 20px)
+    stroke-width: 10px
+    stroke: black
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+  .aboutUsJelly
+    position: absolute
+    height: 200px
+    left: -100px
+    bottom: -90px
+    
+.designConcept
+  position: fixed
+  left: 50%
+  top: 50%
+  margin-left: -150px
+  padding: 20px
+  width: 300px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  transform: translateY(-50%)
+  background-color: rgba(white, 0.5)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
+  box-shadow: 0px 0px 5px 5px rgba(black, 0.1)
+  h1
+    width: 100%
+    text-align: center
+  p  
+    width: 280px
+  .designConceptX
+    +size(20px, 20px)
+    stroke-width: 10px
+    stroke: black
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+  .designConceptJelly
+    position: absolute
+    height: 200px
+    right: -90px
+    bottom: -90px
+    
+.Information
+  position: fixed
+  left: 50%
+  top: 50%
+  margin-left: -150px
+  padding: 20px
+  width: 300px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  transform: translateY(-50%)
+  background-color: rgba(white, 0.5)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
+  box-shadow: 0px 0px 5px 5px rgba(black, 0.1)
+  h1
+    width: 100%
+    text-align: center
+  p
+    width: 280px
+  .InformationX
+    +size(20px, 20px)
+    stroke-width: 10px
+    stroke: black
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+  .InformationJelly
+    position: absolute
+    height: 200px
+    right: -60px
+    bottom: -120px
+ 
+.ClassificationBlock
+  width: 768px
+  background-color: #f5f5f5
+  +phone
+    width: 100vw
+  .inline-name
+    display: flex
+    align-items: end
+    justify-content: space-between
+    h1
+      font-size: 30px
+      font-weight: 900
+      margin-left: 20px
+      +phone
+        margin-left: 5%
+    p
+      margin-right: 20px
+      +phone
+        margin-right: 5%
+      
+.ScyphozoaInformation
+  width: 768px
+  overflow: hidden
+  p
+    margin: 30px 50px
+  .ScyphozoaUp
+    +size(15px, 15px)
+    margin: 0 auto
+    border-top: 2px solid #333
+    border-left: 2px solid #333
+    cursor: pointer
+    transform: rotate(45deg)
+  +phone
+    width: 100vw
+  
+.HydrozoaInformation
+  width: 768px
+  overflow: hidden
+  p
+    margin: 30px 50px
+  .HydrozoaUp
+    +size(15px, 15px)
+    margin: 0 auto
+    border-top: 2px solid #333
+    border-left: 2px solid #333
+    cursor: pointer
+    transform: rotate(45deg)
+  +phone
+    width: 100vw
+      
+.CubozoaCuboInformation
+  width: 768px
+  overflow: hidden
+  p
+    margin: 30px 50px
+  .CubozoaCuboUp
+    +size(15px, 15px)
+    margin: 0 auto
+    border-top: 2px solid #333
+    border-left: 2px solid #333
+    cursor: pointer
+    transform: rotate(45deg)
+  +phone
+    width: 100vw
+  
+.menu
+  width: 768px
+  display: flex
+  flex-direction: column
+  +phone
+    width: 100vw
+  
+  .inlineBlock
+    display: flex
+    Justify-content: center
+    
+    +phone
+      flex-direction: column
+      margin: 0px auto
+    
+    .block
+      margin: 30px
+      +size(300px, 300px)
+      position: relative
+      border-top: 1px solid black
+      border-bottom: 1px solid black
+      transition: 1s
+      cursor: pointer
+      
+      &:hover
+        box-shadow: 0px 0px 10px 5px rgba(black, 0.1)
+      
+      .num
+        position: absolute
+        +size(40px, 40px)
+        top: 10px
+        left: 20px
+        font-weight: 100
+        color: white
+        background-color: black
+        display: flex
+        align-items: center
+        justify-content: center
+        // background-color: rgba(white, 0.3)
+        // backdrop-filter: blur(10px)
+        
+      .name
+        position: absolute
+        width: 35px
+        right: 10px
+        top: 20px
+        font-size: 25px
+        letter-spacing: 10px
+        writing-mode: vertical-lr
+        background-color: rgba(white, 0.3)
+        backdrop-filter: blur(10px)
+        -webkit-backdrop-filter: blur(10px)
+        text-align: center
+        &.namesmall
+          font-size: 20px
+        
+      .time
+        position: absolute
+        left: 20px
+        bottom: 10px
+        font-size: 20px
+        letter-spacing: 5px
+        font-weight: 300
+        background-color: rgba(white, 0.3)
+        backdrop-filter: blur(10px)
+        -webkit-backdrop-filter: blur(10px)
+        text-align: center
+        padding: 1px 6px
+        
+      .EnName
+        position: absolute
+        bottom: 20px
+        left: 50%
+        text-align: center
+        font-size: 10px
+        transform: translateX(-40%)
+        background-color: rgba(white, 0.3)
+        backdrop-filter: blur(10px)
+        -webkit-backdrop-filter: blur(10px)
+        padding: 2px 5px
+
+      svg
+        +size(20px, 20px)
+        background-color: black
+        position: absolute
+        right: 35px
+        bottom: 35px
+        cursor: pointer
+        transition: 0.5s
+        padding: 5px
+        .rect1
+          fill: none
+          stroke: white
+          stroke-width: 5px
+        .rect2
+          fill: black
+        line
+          stroke: white
+          stroke-width: 5px
+        &:hover
+          +size(25px, 25px)
+          right: 32.5px
+          bottom: 32.5px
+        
+.jellyBlock
+  position: fixed
+  left: 50%
+  top: 50%
+  +size(700px, 500px)
+  background-color: rgba(white, 0.5)
+  backdrop-filter: blur(10px)
+  -webkit-backdrop-filter: blur(10px)
+  box-shadow: 0px 0px 5px 5px rgba(black, 0.1)
+  transform: translateX(-50%) translateY(-50%)
+  +phone
+    width: 100vw
+
+  .Bname 
+    position: absolute
+    font-size: 70px
+    font-weight: 900
+    left: 20px
+    top: -20px
+    color: black
+    +phone
+      font-size: 40px
+  .jellyPhoto
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    +phone
+      display: block
+      margin-left: auto
+      margin-right: auto
+      width: 50%
+      object-fit: cover
+      +size(100vw, 100vh)
+  .BEnName
+    position: absolute
+    padding: 5px 20px
+    background-color: black
+    color: white
+    right: 5px
+    top: 50%
+    transform: rotate(90deg) translateX(-50%)
+    +phone
+      font-size: 12px
+  .BMaxHeight
+    position: absolute
+    left: 20px
+    top: 50%
+    transform: translateY(-50%)
+    padding: 5px 20px
+    background-color: black
+    color: white
+    +phone
+      font-size: 12px
+      top: 30%
+  .classification 
+    width: 300px
+    position: absolute
+    left: 20px
+    bottom: 10px
+    +phone
+      font-size: 15px
+  .Btime
+    position: absolute
+    font-size: 70px
+    font-weight: 100
+    right: 50px
+    bottom: -30px
+  .jellyBlockX
+    +size(20px, 20px)
+    position: absolute
+    top: 30px
+    right: 30px
+    stroke: black
+    stroke-width: 10px
+    cursor: pointer
+
+.Blockblack
+  background-color: rgba(0, 20, 51, 0.8)
+  .Bname
+    color: white
+  .Btime
+    color: white
+  .classification 
+    color: white
+  .BMaxHeight
+    color: #13155e
+    background: white
+  .BEnName
+    color: #13155e
+    background: white
+      
+.footer
+  +size(768px, 100px)
+  background-color: #1a1a1a
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  letter-spacing: 10px
+  line-height: 20px
+  +phone
+    width: 100vw
+  p
+    color: white
+    text-align: center
+    font-weight: 300
+    font-size: 12px
+    letter-spacing: 5px
+    margin: 5px
+
+.block1
+  background-image: url("https://i.imgur.com/i140G6O.png")
+  background-size: contain
+  
+.block2
+  background-image: url("https://i.imgur.com/DC6NSdP.png")
+  background-size: contain
+  
+.block3
+  background-image: url("https://i.imgur.com/Nub9Q4y.png")
+  background-size: contain
+
+.block4
+  background-image: url("https://i.imgur.com/3DfYci9.png")
+  background-size: contain
+  
+.block5
+  background-image: url("https://i.imgur.com/OaFVKsv.png")
+  background-size: contain
+  
+.block6
+  background-image: url("https://i.imgur.com/HcJyGIL.png")
+  background-size: contain
+  
+.block7
+  background-image: url("https://i.imgur.com/u6BCanw.png")
+  background-size: contain
+
+.block8
+  background-image: url("https://i.imgur.com/L1xOqFA.png")
+  background-size: contain  
+  
+.block9
+  background-image: url("https://i.imgur.com/9cZb1lz.png")
+  background-size: contain  
+  
+.block10
+  background-image: url("https://i.imgur.com/Xw6VX5v.png")
+  background-size: contain  
+  
+.block11
+  background-image: url("https://i.imgur.com/Ux1Qrs5.png")
+  background-size: contain  
+  
+.block12
+  background-image: url("https://i.imgur.com/4p6gpu1.png")
+  background-size: contain  
+
+.block13
+  background-image: url("https://i.imgur.com/frxcOUM.png")
+  background-size: contain
+
+.block14
+  background-image: url("https://i.imgur.com/3g2xnlK.png")
+  background-size: contain
+  
+.block15
+  background-image: url("https://i.imgur.com/ETzMBWQ.png")
+  background-size: contain
+  
+.block16
+  background-image: url("https://i.imgur.com/GDPC1jK.png")
+  background-size: contain
+  
+.block17
+  background-image: url("https://i.imgur.com/T6b8kyw.png")
+  background-size: contain
+  
+.block18
+  background-image: url("https://i.imgur.com/0Yb27Zm.png")
+  background-size: contain
+  
+.block19
+  background-image: url("https://i.imgur.com/QcQvtQR.png")
+  background-size: contain
+  
+.block20
+  background-image: url("https://i.imgur.com/1nTnk00.png")
+  background-size: contain
+  
+.block21
+  background-image: url("https://i.imgur.com/pMusVbY.png")
+  background-size: contain
+  
+.block22
+  background-image: url("https://i.imgur.com/9BG0tkg.png")
+  background-size: contain
+  
+.block23
+  background-image: url("https://i.imgur.com/7kVVPmu.png")
+  background-size: contain
+  
+.block24
+  background-image: url("https://i.imgur.com/XXkp7Pw.png")
+  background-size: contain
+  
+.block25
+  background-image: url("https://i.imgur.com/f1nrYTJ.png")
+  background-size: contain
+  
+.block26
+  background-image: url("https://i.imgur.com/at9xqOG.png")
+  background-size: contain
+  
+.block27
+  background-image: url("https://i.imgur.com/TRq3UyF.png")
+  background-size: contain
+  
+.block28
+  background-image: url("https://i.imgur.com/dsLfNkO.png")
+  background-size: contain
+  
+.block29
+  background-image: url("https://i.imgur.com/OfulmGP.png")
+  background-size: contain
+  
+.block30
+  background-image: url("https://i.imgur.com/dn2rbt2.png")
+  background-size: contain
+  
+.block31
+  background-image: url("https://i.imgur.com/dEhjCAK.png")
+  background-size: contain
+  
+.block32
+  background-image: url("https://i.imgur.com/8umw25c.png")
+  background-size: contain
+  
+.block33
+  background-image: url("https://i.imgur.com/lYsx5mf.png")
+  background-size: contain
+  
+.block34
+  background-image: url("https://i.imgur.com/hKj7SUm.png")
+  background-size: contain
+  

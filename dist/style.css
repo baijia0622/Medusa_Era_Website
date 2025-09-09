@@ -1,0 +1,789 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html, body {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 740px) {
+  html, body {
+    width: 100vw;
+  }
+}
+
+* {
+  position: relative;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.index {
+  height: 100vh;
+  width: 768px;
+  background-image: url("https://i.imgur.com/XuIllOs.png");
+  background-size: cover;
+}
+@media (max-width: 740px) {
+  .index {
+    width: 100vw;
+  }
+}
+.index .logo {
+  width: 400px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+@media (max-width: 740px) {
+  .index .logo {
+    width: 50vw;
+  }
+}
+.index .ToolbarButton {
+  position: absolute;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: 1s;
+  stroke-width: 10;
+  stroke: black;
+}
+@media (max-width: 740px) {
+  .index .ToolbarButton {
+    margin-right: 5%;
+  }
+}
+.index .ToolbarButton:hover {
+  background-color: black;
+  stroke: white;
+}
+.index .ToolbarButtonX {
+  position: absolute;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: 1s;
+  stroke-width: 10px;
+  background-color: black;
+  stroke: white;
+}
+@media (max-width: 740px) {
+  .index .ToolbarButtonX {
+    margin-right: 5%;
+  }
+}
+.index .Toolbar {
+  display: none;
+  position: absolute;
+  width: 150px;
+  right: 20px;
+  top: 10vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 740px) {
+  .index .Toolbar {
+    top: 20vh;
+  }
+}
+@keyframe ToolbarSwitch {
+  .index .Toolbar from {
+    display: none;
+    top: 20px;
+  }
+  .index .Toolbar to {
+    display: normal;
+    top: 50px;
+  }
+}
+.index .Toolbar .button {
+  font-weight: 600;
+  text-align: right;
+  cursor: pointer;
+  margin: 40px 0px;
+  margin-right: 20px;
+  padding-right: 10px;
+}
+.index .Toolbar .button:hover {
+  background-color: black;
+  color: white;
+}
+.index .hasTage {
+  position: absolute;
+  text-align: right;
+  right: 20px;
+  bottom: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  user-select: none;
+}
+@media (max-width: 740px) {
+  .index .hasTage {
+    margin-right: 5%;
+  }
+}
+
+.aboutUs {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.aboutUs h1 {
+  width: 100%;
+  text-align: center;
+}
+.aboutUs p {
+  width: 280px;
+}
+.aboutUs .aboutUsX {
+  height: 20px;
+  width: 20px;
+  stroke-width: 10px;
+  stroke: black;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.aboutUs .aboutUsJelly {
+  position: absolute;
+  height: 200px;
+  left: -100px;
+  bottom: -90px;
+}
+
+.designConcept {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.designConcept h1 {
+  width: 100%;
+  text-align: center;
+}
+.designConcept p {
+  width: 280px;
+}
+.designConcept .designConceptX {
+  height: 20px;
+  width: 20px;
+  stroke-width: 10px;
+  stroke: black;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.designConcept .designConceptJelly {
+  position: absolute;
+  height: 200px;
+  right: -90px;
+  bottom: -90px;
+}
+
+.Information {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.Information h1 {
+  width: 100%;
+  text-align: center;
+}
+.Information p {
+  width: 280px;
+}
+.Information .InformationX {
+  height: 20px;
+  width: 20px;
+  stroke-width: 10px;
+  stroke: black;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.Information .InformationJelly {
+  position: absolute;
+  height: 200px;
+  right: -60px;
+  bottom: -120px;
+}
+
+.ClassificationBlock {
+  width: 768px;
+  background-color: #f5f5f5;
+}
+@media (max-width: 740px) {
+  .ClassificationBlock {
+    width: 100vw;
+  }
+}
+.ClassificationBlock .inline-name {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.ClassificationBlock .inline-name h1 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-left: 20px;
+}
+@media (max-width: 740px) {
+  .ClassificationBlock .inline-name h1 {
+    margin-left: 5%;
+  }
+}
+.ClassificationBlock .inline-name p {
+  margin-right: 20px;
+}
+@media (max-width: 740px) {
+  .ClassificationBlock .inline-name p {
+    margin-right: 5%;
+  }
+}
+
+.ScyphozoaInformation {
+  width: 768px;
+  overflow: hidden;
+}
+.ScyphozoaInformation p {
+  margin: 30px 50px;
+}
+.ScyphozoaInformation .ScyphozoaUp {
+  height: 15px;
+  width: 15px;
+  margin: 0 auto;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+@media (max-width: 740px) {
+  .ScyphozoaInformation {
+    width: 100vw;
+  }
+}
+
+.HydrozoaInformation {
+  width: 768px;
+  overflow: hidden;
+}
+.HydrozoaInformation p {
+  margin: 30px 50px;
+}
+.HydrozoaInformation .HydrozoaUp {
+  height: 15px;
+  width: 15px;
+  margin: 0 auto;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+@media (max-width: 740px) {
+  .HydrozoaInformation {
+    width: 100vw;
+  }
+}
+
+.CubozoaCuboInformation {
+  width: 768px;
+  overflow: hidden;
+}
+.CubozoaCuboInformation p {
+  margin: 30px 50px;
+}
+.CubozoaCuboInformation .CubozoaCuboUp {
+  height: 15px;
+  width: 15px;
+  margin: 0 auto;
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+@media (max-width: 740px) {
+  .CubozoaCuboInformation {
+    width: 100vw;
+  }
+}
+
+.menu {
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 740px) {
+  .menu {
+    width: 100vw;
+  }
+}
+.menu .inlineBlock {
+  display: flex;
+  Justify-content: center;
+}
+@media (max-width: 740px) {
+  .menu .inlineBlock {
+    flex-direction: column;
+    margin: 0px auto;
+  }
+}
+.menu .inlineBlock .block {
+  margin: 30px;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  transition: 1s;
+  cursor: pointer;
+}
+.menu .inlineBlock .block:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.menu .inlineBlock .block .num {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 10px;
+  left: 20px;
+  font-weight: 100;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .inlineBlock .block .name {
+  position: absolute;
+  width: 35px;
+  right: 10px;
+  top: 20px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  writing-mode: vertical-lr;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+}
+.menu .inlineBlock .block .name.namesmall {
+  font-size: 20px;
+}
+.menu .inlineBlock .block .time {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: 300;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 1px 6px;
+}
+.menu .inlineBlock .block .EnName {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  text-align: center;
+  font-size: 10px;
+  transform: translateX(-40%);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2px 5px;
+}
+.menu .inlineBlock .block svg {
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 5px;
+}
+.menu .inlineBlock .block svg .rect1 {
+  fill: none;
+  stroke: white;
+  stroke-width: 5px;
+}
+.menu .inlineBlock .block svg .rect2 {
+  fill: black;
+}
+.menu .inlineBlock .block svg line {
+  stroke: white;
+  stroke-width: 5px;
+}
+.menu .inlineBlock .block svg:hover {
+  height: 25px;
+  width: 25px;
+  right: 32.5px;
+  bottom: 32.5px;
+}
+
+.jellyBlock {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  height: 500px;
+  width: 700px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (max-width: 740px) {
+  .jellyBlock {
+    width: 100vw;
+  }
+}
+.jellyBlock .Bname {
+  position: absolute;
+  font-size: 70px;
+  font-weight: 900;
+  left: 20px;
+  top: -20px;
+  color: black;
+}
+@media (max-width: 740px) {
+  .jellyBlock .Bname {
+    font-size: 40px;
+  }
+}
+.jellyBlock .jellyPhoto {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (max-width: 740px) {
+  .jellyBlock .jellyPhoto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+.jellyBlock .BEnName {
+  position: absolute;
+  padding: 5px 20px;
+  background-color: black;
+  color: white;
+  right: 5px;
+  top: 50%;
+  transform: rotate(90deg) translateX(-50%);
+}
+@media (max-width: 740px) {
+  .jellyBlock .BEnName {
+    font-size: 12px;
+  }
+}
+.jellyBlock .BMaxHeight {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 20px;
+  background-color: black;
+  color: white;
+}
+@media (max-width: 740px) {
+  .jellyBlock .BMaxHeight {
+    font-size: 12px;
+    top: 30%;
+  }
+}
+.jellyBlock .classification {
+  width: 300px;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+}
+@media (max-width: 740px) {
+  .jellyBlock .classification {
+    font-size: 15px;
+  }
+}
+.jellyBlock .Btime {
+  position: absolute;
+  font-size: 70px;
+  font-weight: 100;
+  right: 50px;
+  bottom: -30px;
+}
+.jellyBlock .jellyBlockX {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  stroke: black;
+  stroke-width: 10px;
+  cursor: pointer;
+}
+
+.Blockblack {
+  background-color: rgba(0, 20, 51, 0.8);
+}
+.Blockblack .Bname {
+  color: white;
+}
+.Blockblack .Btime {
+  color: white;
+}
+.Blockblack .classification {
+  color: white;
+}
+.Blockblack .BMaxHeight {
+  color: #13155e;
+  background: white;
+}
+.Blockblack .BEnName {
+  color: #13155e;
+  background: white;
+}
+
+.footer {
+  height: 100px;
+  width: 768px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  letter-spacing: 10px;
+  line-height: 20px;
+}
+@media (max-width: 740px) {
+  .footer {
+    width: 100vw;
+  }
+}
+.footer p {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin: 5px;
+}
+
+.block1 {
+  background-image: url("https://i.imgur.com/i140G6O.png");
+  background-size: contain;
+}
+
+.block2 {
+  background-image: url("https://i.imgur.com/DC6NSdP.png");
+  background-size: contain;
+}
+
+.block3 {
+  background-image: url("https://i.imgur.com/Nub9Q4y.png");
+  background-size: contain;
+}
+
+.block4 {
+  background-image: url("https://i.imgur.com/3DfYci9.png");
+  background-size: contain;
+}
+
+.block5 {
+  background-image: url("https://i.imgur.com/OaFVKsv.png");
+  background-size: contain;
+}
+
+.block6 {
+  background-image: url("https://i.imgur.com/HcJyGIL.png");
+  background-size: contain;
+}
+
+.block7 {
+  background-image: url("https://i.imgur.com/u6BCanw.png");
+  background-size: contain;
+}
+
+.block8 {
+  background-image: url("https://i.imgur.com/L1xOqFA.png");
+  background-size: contain;
+}
+
+.block9 {
+  background-image: url("https://i.imgur.com/9cZb1lz.png");
+  background-size: contain;
+}
+
+.block10 {
+  background-image: url("https://i.imgur.com/Xw6VX5v.png");
+  background-size: contain;
+}
+
+.block11 {
+  background-image: url("https://i.imgur.com/Ux1Qrs5.png");
+  background-size: contain;
+}
+
+.block12 {
+  background-image: url("https://i.imgur.com/4p6gpu1.png");
+  background-size: contain;
+}
+
+.block13 {
+  background-image: url("https://i.imgur.com/frxcOUM.png");
+  background-size: contain;
+}
+
+.block14 {
+  background-image: url("https://i.imgur.com/3g2xnlK.png");
+  background-size: contain;
+}
+
+.block15 {
+  background-image: url("https://i.imgur.com/ETzMBWQ.png");
+  background-size: contain;
+}
+
+.block16 {
+  background-image: url("https://i.imgur.com/GDPC1jK.png");
+  background-size: contain;
+}
+
+.block17 {
+  background-image: url("https://i.imgur.com/T6b8kyw.png");
+  background-size: contain;
+}
+
+.block18 {
+  background-image: url("https://i.imgur.com/0Yb27Zm.png");
+  background-size: contain;
+}
+
+.block19 {
+  background-image: url("https://i.imgur.com/QcQvtQR.png");
+  background-size: contain;
+}
+
+.block20 {
+  background-image: url("https://i.imgur.com/1nTnk00.png");
+  background-size: contain;
+}
+
+.block21 {
+  background-image: url("https://i.imgur.com/pMusVbY.png");
+  background-size: contain;
+}
+
+.block22 {
+  background-image: url("https://i.imgur.com/9BG0tkg.png");
+  background-size: contain;
+}
+
+.block23 {
+  background-image: url("https://i.imgur.com/7kVVPmu.png");
+  background-size: contain;
+}
+
+.block24 {
+  background-image: url("https://i.imgur.com/XXkp7Pw.png");
+  background-size: contain;
+}
+
+.block25 {
+  background-image: url("https://i.imgur.com/f1nrYTJ.png");
+  background-size: contain;
+}
+
+.block26 {
+  background-image: url("https://i.imgur.com/at9xqOG.png");
+  background-size: contain;
+}
+
+.block27 {
+  background-image: url("https://i.imgur.com/TRq3UyF.png");
+  background-size: contain;
+}
+
+.block28 {
+  background-image: url("https://i.imgur.com/dsLfNkO.png");
+  background-size: contain;
+}
+
+.block29 {
+  background-image: url("https://i.imgur.com/OfulmGP.png");
+  background-size: contain;
+}
+
+.block30 {
+  background-image: url("https://i.imgur.com/dn2rbt2.png");
+  background-size: contain;
+}
+
+.block31 {
+  background-image: url("https://i.imgur.com/dEhjCAK.png");
+  background-size: contain;
+}
+
+.block32 {
+  background-image: url("https://i.imgur.com/8umw25c.png");
+  background-size: contain;
+}
+
+.block33 {
+  background-image: url("https://i.imgur.com/lYsx5mf.png");
+  background-size: contain;
+}
+
+.block34 {
+  background-image: url("https://i.imgur.com/hKj7SUm.png");
+  background-size: contain;
+}
